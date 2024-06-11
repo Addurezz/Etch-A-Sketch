@@ -20,6 +20,8 @@ const addDiv = (dimension) => {
     
 }
 
+//gets user input and displays the dimension accordingly
+
 const btn = document.querySelector("button");
 const getUserInput = () => {
     const userInput = Number(document.querySelector("input").value);
