@@ -3,6 +3,7 @@
 const container = document.querySelector("#container");
 
 const addDiv = (dimension) => {
+    clear()
     //create Rows
     for (i=1; i<dimension +1; i++){
         const divRow = document.createElement("div");
@@ -19,6 +20,10 @@ const addDiv = (dimension) => {
     }
     
 }
+
+//clears the div
+
+const clear = () => container.textContent=""
 
 //gets user input and displays the dimension accordingly
 
