@@ -20,5 +20,16 @@ const addDiv = (dimension) => {
     
 }
 
+const btn = document.querySelector("button");
+const getUserInput = () => {
+    const userInput = Number(document.querySelector("input").value);
+    console.log(typeof userInput);
+    addDiv(userInput);
+}
 
-addDiv(2)
+
+btn.addEventListener("click", getUserInput)
+
+
+
+
