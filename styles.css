@@ -1,8 +1,18 @@
 #container {
     display: flex;
-    width: 400px;
-    height: 400px;
+    width: 700px;
+    height: 700px;
     background-color: rgb(218, 218, 218);
     padding: 10px;
     border: 5px dotted;
+    margin-top: 50px;
+}
+
+.box {
+    margin-top: 20px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
 }
