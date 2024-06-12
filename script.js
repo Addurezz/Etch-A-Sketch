@@ -13,7 +13,7 @@ const addDiv = (dimension) => {
         for (j=1; j < dimension+1; j++) {
             const divRowElement = document.createElement("div");
             divRowElement.classList.add("divRowElement");
-            divRowElement.setAttribute("style", "aspect-ratio: 1/1; border: 1px solid black; ")
+            divRowElement.setAttribute("style", "aspect-ratio: 1/1;")
             divRow.appendChild(divRowElement)
         }
         container.appendChild(divRow)
