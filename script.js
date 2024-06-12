@@ -13,12 +13,12 @@ const addDiv = (dimension) => {
         for (j=1; j < dimension+1; j++) {
             const divRowElement = document.createElement("div");
             divRowElement.classList.add("divRowElement");
-            divRowElement.setAttribute("style", "display; aspect-ratio: 1/1; border: 1px solid black; ")
+            divRowElement.setAttribute("style", "aspect-ratio: 1/1; border: 1px solid black; ")
             divRow.appendChild(divRowElement)
         }
         container.appendChild(divRow)
     }
-    
+    changeColor()
 }
 
 //clears the div
@@ -27,7 +27,7 @@ const clear = () => container.textContent=""
 
 //gets user input and displays the dimension accordingly
 
-const btn = document.querySelector("button");
+const btn = document.querySelector("#enter");
 const getUserInput = () => {
     const userInput = Number(document.querySelector("input").value);
     console.log(typeof userInput);
@@ -36,6 +36,36 @@ const getUserInput = () => {
 
 
 btn.addEventListener("click", getUserInput)
+
+//make the divs black when the cursor hovers over them
+
+const changeColor=  () => {
+    const divRowElements = document.querySelectorAll(".divRowElement");
+    divRowElements.forEach((element) => {
+        element.addEventListener("mouseenter", () => {
+            element.classList.add("colored")
+            element.style.backgroundColor ="black"
+        });
+    });
+};
+
+//clear the color
+
+const clearColor = () => {
+    const coloredDiv = document.querySelectorAll(".colored");
+
+    coloredDiv.forEach((element) => {
+        element.classList.remove("colored");
+        element.style.backgroundColor=""
+    });
+}
+
+const btnClear = document.querySelector("#clearColor");
+btnClear.addEventListener("click", clearColor);
+
+
+
+
 
 
 
