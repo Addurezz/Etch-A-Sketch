@@ -69,4 +69,3 @@ btnClear.addEventListener("click", clearColor);
 
 
 
-
